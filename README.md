@@ -29,6 +29,7 @@ The format of the domain.properties file is key=value pair:
 username=mynodemanagerusername
 password=mynodemanagerpassword
 ```
+> Notice: password cannot be to weak (e.g. mima1234, 123456 or password) that may result in OHS fails to boot.
 
 ### How to run container
 If you want to start the OHS container without specifying any configuration for mod_weblogic:
