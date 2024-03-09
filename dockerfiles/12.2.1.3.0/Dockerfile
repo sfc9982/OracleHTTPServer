@@ -1,5 +1,5 @@
 #
-# Copyright (c) 2016-2019 Oracle and/or its affiliates. All rights reserved.
+# Copyright (c) 2016-2024 Oracle and/or its affiliates. All rights reserved.
 
 
 #
@@ -43,7 +43,6 @@ FROM java/serverjre:8
 # Maintainer
 # ------------------------------------
 MAINTAINER Prabhat Kishore <prabhat.kishore@oracle.com>
-MAINTAINER Jackson Chen <sfc9982@googles.plus>
 
 # Environment variables required for this build (do NOT change)
 # ----------------------------------------------
@@ -69,7 +68,7 @@ COPY $OHS_PKG install.file oraInst.loc /u01/
 # Install OL7 required packages. Refer FMW 12.2.1.3 System requirements guide for complete list of packages
 # Setup filesystem and oracle user
 #---------------------------------------------------------------------------------------------------------
-RUN yum install -y unzip libaio sysstat make psmisc gcc gcc-c++ vi && \
+RUN yum install -y unzip libaio sysstat make psmisc gcc gcc-c++ vi vim && \
     yum clean all && \
     chmod a+xr /u01 && \
     useradd -b /u01 -m -s /bin/bash oracle && \
